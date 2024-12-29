@@ -1,4 +1,4 @@
-ProfilePage component:
+### ProfilePage component:
 
 ```js
 
@@ -12,9 +12,9 @@ import { useState, useEffect } from 'react';
 
 import ProfileCard from './components/ProfileCard';
 
-import EditProfileForm from '@/app/components/EditProfileForm';
+import EditProfileForm from './components/EditProfileForm';
 
-import styles from '@/app/Profile.module.css';
+import styles from './profile/Profile.module.css';
 
 
 
@@ -230,7 +230,7 @@ export default ProfilePage;
 
 
 
-EditProfileForm component:
+### EditProfileForm component:
 
 ```js
 
@@ -304,7 +304,7 @@ const EditProfileForm = ({ user, onSave, onCancel }) => {
 
     e.preventDefault();
 
-    onSave({ ...user, ...form });
+    onSave({ ...user, ...form }, userId);
 
   };
 
@@ -398,7 +398,7 @@ export default EditProfileForm;
 
 ```
 
-User.py:
+### User.py:
 
 ```python
 
